@@ -22,18 +22,17 @@ EOF
   echo "ZSH_PATH has been added to .zshrc"
 fi
 
+function link() {
+  if [[ -f $1 ]]; then
+    echo "$1 already exists"
+  else
+    ln -s $HOME/$1 $1
+    echo "$1 has been created"
+  fi
+}
+
 # Create symlink for .zshrc
-if [[ -f .zshrc ]]; then
-  echo ".zshrc already exists"
-else
-  ln -s $HOME/.zshrc .zshrc
-  echo ".zshrc has been created"
-fi
+link .zshrc
 
 # Create symlink for .gitconfig
-if [[ -f .gitconfig ]]; then
-  echo ".gitconfig already exists"
-else
-  ln -s $HOME/.gitconfig .gitconfig
-  echo ".gitconfig has been created"
-fi
+link .gitconfig

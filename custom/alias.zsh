@@ -1,6 +1,6 @@
 # SYSTEM
 alias srb="sudo reboot"
-alias sdn="shutdown now"
+function sdn() { if [[ $1 == "-f" ]]; then systemctl poweroff -i; else shutdown now $1; fi }
 
 # BASH
 alias edtb="gedit ~/.bashrc"
