@@ -1,0 +1,2 @@
+# NPM
+alias pn="pnpm"

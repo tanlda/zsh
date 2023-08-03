@@ -1,0 +1,43 @@
+[alias]
+	acm = !git add . && git commit -m
+	aam = !git add . && git commit --amend
+	anm = !git commit -n --amend
+	pcb = branch --show-current
+	ccb = !git scb | tr -d '\n' | xclip -sel clip
+	rst = restore
+	resh = reset --soft HEAD^
+	reshh = reset --hard HEAD^
+	br = branch
+	b  = branch
+	st = status
+	s  = status
+	c  = checkout
+	co = checkout
+	cob = checkout -b
+	cofb = checkout -fB
+	rb = rebase
+	lg = log
+	l  = log
+	fa = fetch --all
+	f  = fetch --all
+	pu = pull
+	p  = pull
+	ps = push
+	psf = push -f
+	cp = cherry-pick
+	fap = !git fetch --all && git pull
+[user]
+	name = prd-tan-le
+	email = tan.le@paradox.ai
+	signingKey = ""
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
