@@ -19,9 +19,21 @@ source \$ZSH_PATH/python.zsh
 source \$ZSH_PATH/utils.zsh
 source \$ZSH_PATH/works.zsh
 EOF
+  echo "ZSH_PATH has been added to .zshrc"
 fi
 
 # Create symlink for .zshrc
-if [[ ! -f .zshrc ]]; then
+if [[ -f .zshrc ]]; then
+  echo ".zshrc already exists"
+else
   ln -s $HOME/.zshrc .zshrc
+  echo ".zshrc has been created"
+fi
+
+# Create symlink for .gitconfig
+if [[ -f .gitconfig ]]; then
+  echo ".gitconfig already exists"
+else
+  ln -s $HOME/.gitconfig .gitconfig
+  echo ".gitconfig has been created"
 fi

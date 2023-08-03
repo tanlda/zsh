@@ -1,7 +1,7 @@
 [alias]
 	acm = !git add . && git commit -m
 	aam = !git add . && git commit --amend
-	anm = !git commit -n --amend
+	anm = !git add . && git commit -n --amend
 	pcb = branch --show-current
 	ccb = !git scb | tr -d '\n' | xclip -sel clip
 	rst = restore
@@ -16,8 +16,10 @@
 	cob = checkout -b
 	cofb = checkout -fB
 	rb = rebase
-	lg = log
 	l  = log
+	ll = log -1
+	lo = log --oneline
+	llo = log -1 --oneline
 	fa = fetch --all
 	f  = fetch --all
 	pu = pull

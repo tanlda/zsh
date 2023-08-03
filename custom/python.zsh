@@ -14,9 +14,14 @@ alias prr="poetry run rcache_usage"
 alias qcl="poetry run qcluster"
 
 # DJANGO
+alias mng="python3 manage.py"
+alias mngt="python3 manage.py test"
+
 function drs() { python3 src/manage.py runserver {$1:-8000} }
 function drsh() { python3 src/manage.py shell }
 function drm() { python3 src/manage.py migrate }
 function drmm() { python3 src/manage.py makemigrations }
 function drcmd() { python3 src/manage.py "$@" }
 
+# UNITTEST
+alias puni="python -m unittest"
