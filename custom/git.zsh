@@ -10,6 +10,7 @@ alias grst="g rst"
 alias gstl="g stash list"
 alias gsta="g stash apply"
 alias gstp="g stash pop"
+alias gstc="g stash clear"
 alias grbc="g rb --continue"
 alias grba="g rb --abort"
 alias grbs="g rb --skip"
@@ -69,8 +70,7 @@ function glrb() {
 }
 
 function grbD() {
-  tbr=`grpb $1`
-  g br -D $tbr
+  g br -D `grpb $1`
 }
 
 function grb_() {
@@ -104,6 +104,7 @@ function gmbD() { iter grbD $1 }
 function grcheck() {
   echo `git config --local user.name`
   echo `git config --local user.email`
+  echo `git config --local core.sshCommand`
 }
 function grconfig() {
   git config --add --local user.name "tanlda"

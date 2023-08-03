@@ -9,7 +9,7 @@
 	reshh = reset --hard HEAD^
 	br = branch
 	b  = branch
-	st = status
+	st = stash
 	s  = status
 	c  = checkout
 	co = checkout
@@ -29,8 +29,8 @@
 	cp = cherry-pick
 	fap = !git fetch --all && git pull
 [user]
-	name = prd-tan-le
-	email = tan.le@paradox.ai
+	name = tanlda
+	email = ledinhanhtan.stack@gmail.com
 	signingKey = ""
 [filter "lfs"]
 	clean = git-lfs clean -- %f
