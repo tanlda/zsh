@@ -96,9 +96,16 @@ function gpsc() {
   g ps -u $1 origin $cbr
 }
 
+function grrst() {
+  ccm=`g s | grep $1 | sed 's/modified://' | trm | xargs echo`
+  echored $ccm
+  g rst $ccm
+}
+
 # MULTI
 function gmcp() { iter gcp $1 }
 function gmbD() { iter grbD $1 }
+function gmrst() { iter grrst $1 }
 
 # CONFIG
 function grcheck() {
