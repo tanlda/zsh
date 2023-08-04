@@ -24,7 +24,7 @@ function gref() {
   g cofb _
   g br -D $cbr
   g fa
-  g co -b $cbr
+  g co $cbr
   g br -D _
 }
 
