@@ -1,7 +1,16 @@
 # PIP
 alias pipup="pip install --upgrade pip"
-function pipfrz() { pip freeze > $1requirements.txt }
-function pipfrzb() { pipfrz "base/" }
+function pfrz() {
+  pip freeze > $1requirements.txt
+}
+
+function pfrzb() {
+  if [[ $1 == "-s" ]]; then
+    pip freeze > ~/work/stackrepos/slac-core/requirements/base.txt
+  else
+    pip freeze > requirements/base.txt
+  fi
+}
 
 # POETRY
 alias p="poetry"
@@ -16,6 +25,7 @@ alias qcl="poetry run qcluster"
 # DJANGO
 alias mng="python3 manage.py"
 alias mngt="python3 manage.py test"
+function dasa() { django-admin startapp --template template $1 }
 
 function drs() { python3 src/manage.py runserver {$1:-8000} }
 function drsh() { python3 src/manage.py shell }

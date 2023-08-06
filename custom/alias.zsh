@@ -33,3 +33,7 @@ function listport() { sudo lsof -i -P -n | grep LISTEN }
 alias warpon="warp-cli connect"
 alias warpff="warp-cli disconnect"
 alias warpstt="curl https://www.cloudflare.com/cdn-cgi/trace/"
+
+# PRE-COMMIT
+alias prcm="pre-commit"
+alias prcmra="pre-commit run --all-files"
