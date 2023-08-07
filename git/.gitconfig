@@ -43,3 +43,12 @@
 	gpgSign = false
 [tag]
 	forceSignAnnotated = false
+
+[includeIf "gitdir/i:~/work/stackrepos/"]
+    path = ~/git/dev/.gitconfig
+; [user]
+;     name = tanlda
+;     email = ledinhanhtan.stack@gmail.com
+;     signingKey = ""
+; [core]
+;     sshCommand = ssh -i ~/.ssh/root.pub
