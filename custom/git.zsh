@@ -102,9 +102,9 @@ function grrst() {
 }
 
 # MULTI
-function gmcp() { iter gcp $1 }
-function gmbD() { iter grbD $1 }
-function gmrst() { iter grrst $1 }
+function gmcp() { iter gcp $@ }
+function gmbD() { iter grbD $@ }
+function gmrst() { iter grrst $@ }
 
 # CONFIG
 function grcheck() {

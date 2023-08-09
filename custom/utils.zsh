@@ -1,9 +1,8 @@
 # ITER
 function iter() {
-	IFS=' ' read -A items <<< $2
-	for item in "${items[@]}"
-	do
-	  $1 $item
+  local func=$1; shift
+	for item in "$@"; do
+	  $func $item
 	done
 }
 
