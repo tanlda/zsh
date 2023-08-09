@@ -1,0 +1,6 @@
+[user]
+    name = root
+    email = root@localhost
+    signingKey = ""
+[core]
+    sshCommand = ssh -i ~/.ssh/root.pub

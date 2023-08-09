@@ -107,20 +107,8 @@ function gmbD() { iter grbD $@ }
 function gmrst() { iter grrst $@ }
 
 # CONFIG
-function grcheck() {
-  echo `git config --local user.name`
-  echo `git config --local user.email`
-  echo `git config --local core.sshCommand`
-}
-function grconfig() {
-  git config --add --local user.name "tanlda"
-  git config --add --local user.email "ledinhanhtan.stack@gmail.com"
-  git config --add --local core.sshCommand 'ssh -i ~/.ssh/root.pub'
-  grcheck
-}
-function grinit() {
+function ginit() {
   g init
-  grconfig
   g acm 'initial commit'
   g br -M main
 }

@@ -1,5 +1,6 @@
 [alias]
 	acm = !git add . && git commit -m
+	acn = !git add . && git commit -n -m
 	aam = !git add . && git commit --amend
 	anm = !git add . && git commit -n --amend
 	pcb = branch --show-current
@@ -29,8 +30,8 @@
 	cp = cherry-pick
 	fap = !git fetch --all && git pull
 [user]
-	name = tanlda
-	email = ledinhanhtan.stack@gmail.com
+	name = ""
+	email = ""
 	signingKey = ""
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -43,12 +44,5 @@
 	gpgSign = false
 [tag]
 	forceSignAnnotated = false
-
-[includeIf "gitdir/i:~/work/stackrepos/"]
-    path = ~/git/dev/.gitconfig
-; [user]
-;     name = tanlda
-;     email = ledinhanhtan.stack@gmail.com
-;     signingKey = ""
-; [core]
-;     sshCommand = ssh -i ~/.ssh/root.pub
+[includeIf "gitdir/i:~/work/paradox/"]
+    path = ~/git/company/.gitconfig
