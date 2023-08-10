@@ -10,5 +10,5 @@ alias d="docker"
 
 # NGROK
 function ngdom () {
-  ngrok http --domain {$1:-thankfully-finer-urchin.ngrok-free.app} http://localhost:{$2:-9001}
+  ngrok http --domain "${1:-thankfully-finer-urchin.ngrok-free.app}" "http://localhost:${2:-9001}"
 }
