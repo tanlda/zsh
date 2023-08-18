@@ -20,7 +20,7 @@ alias prm="poetry run migrate"
 alias prmm="poetry run makemigrations"
 alias prsh="poetry run shell"
 alias prr="poetry run rcache_usage"
-alias qcl="poetry run qcluster"
+alias prq="poetry run qcluster"
 
 # DJANGO
 alias mng="python3 manage.py"

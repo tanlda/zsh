@@ -17,6 +17,8 @@ alias gcp="g cp"
 alias gcpc="g cp --continue"
 alias gcpa="g cp --abort"
 alias gcps="g cp --skip"
+alias gpcb="g pcb"
+alias gcob="g cob"
 
 function gref() {
   cbr=`g pcb`
@@ -101,10 +103,21 @@ function grrst() {
   g rst $ccm
 }
 
+function gccb() {
+  gpcb | xargs echo
+  g ccb
+}
+
 # MULTI
-function gmcp() { iter gcp $@ }
-function gmbD() { iter grbD $@ }
-function gmrst() { iter grrst $@ }
+function gmcp() {
+  iter gcp "$@"
+}
+function gmbD() {
+  iter grbD "$@"
+}
+function gmrst() {
+  iter grrst "$@"
+}
 
 # CONFIG
 function ginit() {
