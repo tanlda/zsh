@@ -3,8 +3,8 @@
 	acn = !git add . && git commit -n -m
 	aam = !git add . && git commit --amend
 	anm = !git add . && git commit -n --amend
-	pcb = branch --show-current
-	ccb = !git pcb | tr -d '\n' | xclip -sel clip
+	scb = branch --show-current
+	ccb = !git scb | tr -d '\n' | xclip -sel clip
 	rst = restore
 	resh = reset --soft HEAD^
 	reshh = reset --hard HEAD^

@@ -17,11 +17,11 @@ alias gcp="g cp"
 alias gcpc="g cp --continue"
 alias gcpa="g cp --abort"
 alias gcps="g cp --skip"
-alias gpcb="g pcb"
 alias gcob="g cob"
+alias gscb="g scb"
 
 function gref() {
-  cbr=`g pcb`
+  cbr=`g scb`
   g cofb _
   g br -D $cbr
   g fa
@@ -93,7 +93,7 @@ function gresh() {
 }
 
 function gpsc() {
-  cbr=`g pcb`
+  cbr=`g scb`
   g ps -u $1 origin $cbr
 }
 
@@ -104,7 +104,7 @@ function grrst() {
 }
 
 function gccb() {
-  gpcb | xargs echo
+  gscb | xargs echo
   g ccb
 }
 
