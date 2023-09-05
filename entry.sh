@@ -12,6 +12,7 @@ ZSH_PATH=$CUSTOM_PATH
 source \$ZSH_PATH/utils.zsh
 source \$ZSH_PATH/alias.zsh
 source \$ZSH_PATH/dirs.zsh
+source \$ZSH_PATH/fix.zsh
 source \$ZSH_PATH/git.zsh
 source \$ZSH_PATH/infra.zsh
 source \$ZSH_PATH/node.zsh
