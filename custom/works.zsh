@@ -1,4 +1,5 @@
 # PARADOX
+alias drc="cd src && celery -A ai_queue worker -E -l INFO -n worker-1@%h -Q test.slac.queue.adhoc,test.slac.queue.message,test.slac.queue.primary,test.slac.queue.general,test.slac.queue.analytic"
 alias prc="cd src && celery -A ai_queue worker -E -l INFO -n worker-1@%h -Q test.olivia.queue.primary,test.olivia.queue.communication,test.olivia.queue.general,test.olivia.queue.adhoc,test.olivia.queue.analytics"
 
 alias genpkt="python src/manage.py gen_pick_time_url"

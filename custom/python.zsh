@@ -35,3 +35,6 @@ function drcmd() { python3 src/manage.py "$@" }
 
 # UNITTEST
 alias puni="python -m unittest"
+
+# JUPYTER
+alias jp="jupyter"
