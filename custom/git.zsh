@@ -87,11 +87,6 @@ function gresf() {
   g resh
 }
 
-function gresh() {
-  if [[ $1 == "-c" ]]; then gccm; fi
-  g reshh
-}
-
 function gpsc() {
   cbr=`g scb`
   g ps -u $1 origin $cbr

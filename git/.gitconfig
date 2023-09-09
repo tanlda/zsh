@@ -7,7 +7,6 @@
 	ccb = !git scb | tr -d '\n' | xclip -sel clip
 	rst = restore
 	resh = reset --soft HEAD^
-	reshh = reset --hard HEAD^
 	br = branch
 	b  = branch
 	st = stash
