@@ -117,6 +117,8 @@ function gmrst() {
 # CONFIG
 function ginit() {
   g init
+  touch .gitignore
+  echo ".idea" >> .gitignore
   g acm 'initial commit'
   g br -M main
 }
