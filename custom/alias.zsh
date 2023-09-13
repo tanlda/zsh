@@ -8,6 +8,7 @@ alias edtz="gedit ~/.zshrc"
 alias edtg="gedit ~/.gitconfig"
 alias refb="source ~/.bashrc"
 alias refz="source ~/.zshrc"
+alias refp="source ~/.profile"
 
 # GENERAL
 alias sudo="sudo "
