@@ -19,7 +19,7 @@ function nxpks() {
     pnpm nx build $PKG
   done
 }
-funciton nxref() {
+function nxref() {
   rm -rf ./**/node_modules/
   pn i && cd client && pn i && cd ..
   pnpm build:ci && nxpks

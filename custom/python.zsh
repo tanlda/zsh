@@ -38,3 +38,7 @@ alias puni="python -m unittest"
 
 # JUPYTER
 alias jp="jupyter"
+
+# PRE-COMMIT
+alias prcm="pre-commit"
+alias prcmra="pre-commit run --all-files"
