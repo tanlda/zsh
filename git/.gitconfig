@@ -28,6 +28,7 @@
 	psf = push -f
 	cp = cherry-pick
 	fap = !git fetch --all && git pull
+	stn = stash push -m
 [user]
 	name = ""
 	email = ""

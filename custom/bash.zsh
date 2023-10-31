@@ -3,7 +3,7 @@ alias srb="sudo reboot"
 function sdn() { if [[ $1 == "-f" ]]; then systemctl poweroff -i; else shutdown now $1; fi }
 
 # APT
-function aptup() { sudo apt update && sudo apt upgrade }
+function aptup() { sudo apt update && sudo apt upgrade && sudo apt autoremove }
 
 # BASH
 alias edtb="gedit ~/.bashrc"

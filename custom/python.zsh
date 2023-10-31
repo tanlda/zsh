@@ -42,3 +42,11 @@ alias scsh="scrapy shell"
 # PRE-COMMIT
 alias prcm="pre-commit"
 alias prcmra="pre-commit run --all-files"
+
+# PYBASH
+function ppt() {
+  out=$(python3 -c "print($1)")
+  if [[ $2 == "-c" ]]; then
+    echo $out | tr -d "\n" | pbcopy
+  fi
+}

@@ -20,6 +20,11 @@ alias gcpa="g cp --abort"
 alias gcps="g cp --skip"
 alias gcob="g cob"
 alias gscb="g scb"
+alias gstn="g stn"
+
+function gsan() {
+  g st apply stash^{/$1}
+}
 
 function gref() {
   cbr=`g scb`
