@@ -33,11 +33,11 @@ function drm() { python3 src/manage.py migrate }
 function drmm() { python3 src/manage.py makemigrations }
 function drcmd() { python3 src/manage.py "$@" }
 
-# UNITTEST
+# MISC
 alias puni="python -m unittest"
-
-# JUPYTER
 alias jp="jupyter"
+alias sc="scrapy"
+alias scsh="scrapy shell"
 
 # PRE-COMMIT
 alias prcm="pre-commit"

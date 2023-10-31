@@ -1,4 +1,5 @@
 .idea/
 .zshrc
+.bashrc
 /.gitconfig
 custom/local.zsh

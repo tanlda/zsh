@@ -94,9 +94,18 @@ function gpsc() {
 }
 
 function grrst() {
-  ccm=`g s | grep $1 | sed 's/modified://' | trm | xargs echo`
+  local str
+  local opts
+  if [ -n "$2" ]; then
+    opts="$1"
+    str="$2"
+  else
+    str="$1"
+  fi
+
+  ccm=`g s | grep $str | sed 's/modified://' | sed 's/new file://' | trm | xargs echo`
   echored $ccm
-  g rst $ccm
+  g rst $opts $ccm
 }
 
 function gccb() {

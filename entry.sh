@@ -31,8 +31,6 @@ function link() {
   fi
 }
 
-# Create symlink for .zshrc
 link .zshrc
-
-# Create symlink for .gitconfig
+link .bashrc
 link .gitconfig
