@@ -17,6 +17,7 @@ source \$ZSH_PATH/infra.zsh
 source \$ZSH_PATH/node.zsh
 source \$ZSH_PATH/python.zsh
 source \$ZSH_PATH/vendors.zsh
+source \$ZSH_PATH/local.zsh
 source \$ZSH_PATH/works.zsh
 EOF
   echo "ZSH_PATH has been added to .zshrc"

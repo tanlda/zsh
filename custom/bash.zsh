@@ -25,6 +25,7 @@ alias clera="clear"
 alias claer="clear"
 alias CLEAR="clear"
 alias C="clear"
+alias ls="ls --color=tty"
 
 # XCLIP
 alias pbcopy="xclip -selection clipboard"
