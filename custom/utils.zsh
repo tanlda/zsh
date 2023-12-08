@@ -35,3 +35,13 @@ function echoblu() { coecho "$1" "\033[0;34m" }
 function echopur() { coecho "$1" "\033[0;35m" }
 function echocya() { coecho "$1" "\033[0;36m" }
 function echowhi() { coecho "$1" "\033[0;37m" }
+
+function echospl() {
+  str=$1
+  ifs=${2:-':'}
+  parts=($(echo "$str" | tr "$ifs" "\n"))
+  for part in "${parts[@]}"
+  do
+    echo "$part"
+  done
+}

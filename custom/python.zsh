@@ -1,3 +1,6 @@
+# PYTHON
+alias py="python3.10 "
+
 # PIP
 alias pipup="pip install --upgrade pip"
 function pfrz() {

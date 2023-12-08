@@ -3,4 +3,4 @@
     email = root@localhost
     signingKey = ""
 [core]
-    sshCommand = ssh -i ~/.ssh/root.pub
+    sshCommand = ssh -i ~/.ssh/root

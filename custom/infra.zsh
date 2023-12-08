@@ -13,6 +13,18 @@ alias d="docker"
 function dx() {
   docker exec -it $1 ${2:-bash}
 }
+function drps() {
+  kw="$1"
+  ext="${2:-"{print \$1}"}"
+  docker ps | grep "$kw" | awk "$ext"
+}
+function drstop() {
+  drps "$1" "$2" | xargs docker stop
+}
+
+# KUBERNETES
+alias kb="kubectl"
+alias mkb="minikube"
 
 function dxdb() {
   local params

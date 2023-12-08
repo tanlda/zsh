@@ -1,0 +1,20 @@
+#!/bin/bash
+
+base=$1
+reviewer=$2
+jira=$(git branch --show-current | tr -d '\n' | grep -oE 'OL-[0-9]+')
+
+oliv="$HOME/work/paradox/olivia"
+tpl=".github/PULL_REQUEST_TEMPLATE.md"
+body=$(cat "$oliv/$tpl")
+if [[ ! -z "$jira" ]]; then
+  ticket="https:\/\/paradoxai.atlassian.net\/browse\/$jira"
+  body=$(echo "$body" | sed -r "s/<\!--- Paste JIRA link -->/$ticket/")
+fi
+commit=$(git log --pretty=oneline | head -1 | perl -pne 's/^(.{1,41}) (.*)$/$2/; s/\n//g')
+
+gh pr create \
+  --base "$base" \
+  --reviewer "$reviewer" \
+  --title "$commit" \
+  --body "$body"
